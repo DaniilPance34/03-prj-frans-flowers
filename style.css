@@ -1,0 +1,831 @@
+/* =========================================
+   FRAN'S FLOWERS
+   Main Stylesheet
+   ========================================= */
+
+
+/* ---------- GENERAL PAGE STYLES ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffaf7;
+    color: #2f3e35;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2.4rem;
+    color: #244c38;
+    margin-bottom: 15px;
+}
+
+h3 {
+    color: #315c46;
+}
+
+.section-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.small-heading {
+    color: #9a4f5c;
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.section-intro {
+    max-width: 650px;
+    margin-bottom: 35px;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    background-color: #244c38;
+    color: white;
+}
+
+.header-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.logo h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+}
+
+.logo p {
+    margin: 3px 0 0;
+    color: #f5e7dc;
+    font-size: 0.9rem;
+}
+
+
+/* =========================================
+   NAVIGATION BAR
+   ========================================= */
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+
+    padding: 8px 4px;
+
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #ffd7d7;
+    border-bottom: 2px solid #ffd7d7;
+}
+
+nav a:focus-visible,
+.button:focus-visible,
+footer a:focus-visible {
+    outline: 3px solid #ffd166;
+    outline-offset: 4px;
+}
+
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+    min-height: 540px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(255, 250, 247, 0.86),
+            rgba(255, 250, 247, 0.86)
+        ),
+        url("https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 4rem;
+    line-height: 1.1;
+    max-width: 700px;
+    margin-bottom: 20px;
+}
+
+.hero p:not(.small-heading) {
+    max-width: 600px;
+    font-size: 1.15rem;
+    margin-bottom: 30px;
+}
+
+
+/* ---------- BUTTON ---------- */
+
+.button {
+    display: inline-block;
+
+    background-color: #9a4f5c;
+    color: white;
+
+    padding: 13px 25px;
+
+    text-decoration: none;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    background-color: #773c47;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   ABOUT SECTION
+   ========================================= */
+
+.about {
+    background-color: white;
+    text-align: center;
+}
+
+.about .section-container {
+    max-width: 800px;
+}
+
+.about p:not(.small-heading) {
+    font-size: 1.05rem;
+}
+
+.text-link {
+    display: inline-block;
+
+    color: #8a3f4d;
+    font-weight: bold;
+    text-decoration: none;
+
+    margin-top: 10px;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   SPECIALS
+   ========================================= */
+
+.specials {
+    background-color: #f6eee8;
+}
+
+.specials h2,
+.specials .small-heading,
+.specials .section-intro {
+    text-align: center;
+}
+
+.specials .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flower-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.flower-card {
+    background-color: white;
+
+    width: 31%;
+    min-width: 260px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.flower-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+}
+
+.flower-image {
+    min-height: 190px;
+
+    background-color: #f5dfe1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 6rem;
+}
+
+.flower-info {
+    padding: 25px;
+}
+
+.flower-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: #8a3f4d;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   SEASONAL PICKS
+   ========================================= */
+
+.seasonal {
+    background-color: white;
+}
+
+.seasonal > .section-container > h2,
+.seasonal > .section-container > .small-heading {
+    text-align: center;
+}
+
+.seasonal-card {
+    max-width: 950px;
+    margin: 35px auto 0;
+
+    display: flex;
+    align-items: stretch;
+
+    background-color: #f7eee8;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.seasonal-card img {
+    width: 48%;
+    object-fit: cover;
+    min-height: 380px;
+}
+
+.seasonal-info {
+    width: 52%;
+    padding: 45px;
+}
+
+.seasonal-info h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.season-label {
+    color: #8a3f4d;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.season-note {
+    display: inline-block;
+
+    background-color: #244c38;
+    color: white;
+
+    padding: 7px 12px;
+
+    border-radius: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   TESTIMONIALS
+   ========================================= */
+
+.testimonials {
+    background-color: #244c38;
+    color: white;
+}
+
+.testimonials h2 {
+    color: white;
+    text-align: center;
+}
+
+.testimonials .small-heading {
+    color: #ffd4d9;
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    width: 31%;
+    min-width: 260px;
+
+    margin: 0;
+
+    background-color: white;
+    color: #2f3e35;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+.testimonial-card p {
+    font-size: 1.05rem;
+    font-style: italic;
+}
+
+.stars {
+    color: #a25b16;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.testimonial-card footer {
+    margin-top: 20px;
+}
+
+.testimonial-card footer strong {
+    display: block;
+    color: #244c38;
+}
+
+.testimonial-card footer span {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+
+/* =========================================
+   VISIT US
+   ========================================= */
+
+.visit {
+    background-color: #fffaf7;
+    text-align: center;
+}
+
+.visit .section-intro {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.visit-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    margin-top: 40px;
+}
+
+.visit-card {
+    background-color: white;
+
+    width: 30%;
+    min-width: 250px;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    border: 1px solid #ded5cf;
+}
+
+.visit-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.visit-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+}
+
+.visit-card a {
+    color: #7d3744;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+.site-footer {
+    background-color: #173528;
+    color: white;
+
+    padding: 55px 20px 20px;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    gap: 35px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px;
+}
+
+.footer-column h2,
+.footer-column h3 {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.footer-column p {
+    color: #e6eee9;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #f4dfd4;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+/* ---------- FOOTER BOTTOM ---------- */
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1100px;
+
+    margin: 40px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #557063;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #dce7e1;
+}
+
+.footer-bottom a {
+    color: #f4dfd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   Tablet / Smaller Screens
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+
+        padding: 20px 0;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 18px;
+    }
+
+    .hero h2 {
+        font-size: 3rem;
+    }
+
+    .flower-card {
+        width: 45%;
+    }
+
+    .testimonial-card {
+        width: 45%;
+    }
+
+    .seasonal-card {
+        flex-direction: column;
+    }
+
+    .seasonal-card img {
+        width: 100%;
+        height: 350px;
+        min-height: 0;
+    }
+
+    .seasonal-info {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   Mobile Phones
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    section {
+        padding: 55px 18px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+
+    /* Mobile navigation */
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+
+        width: 100%;
+
+        padding: 10px;
+
+        background-color: #315c46;
+
+        border-radius: 5px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background-color: #3e7057;
+        border-bottom: none;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 480px;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    /* Flower cards */
+
+    .flower-grid {
+        flex-direction: column;
+    }
+
+    .flower-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Seasonal */
+
+    .seasonal-card img {
+        height: 260px;
+    }
+
+    .seasonal-info {
+        padding: 28px;
+    }
+
+    .seasonal-info h3 {
+        font-size: 1.7rem;
+    }
+
+
+    /* Testimonials */
+
+    .testimonial-grid {
+        flex-direction: column;
+    }
+
+    .testimonial-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Visit */
+
+    .visit-grid {
+        flex-direction: column;
+    }
+
+    .visit-card {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    /* Footer */
+
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+   ========================================= */
+
+/* Makes keyboard navigation easier to see */
+
+a:focus-visible {
+    outline: 3px solid #ffd166;
+    outline-offset: 3px;
+}
+
+
+/* Makes content easier to read */
+
+p {
+    font-size: 1rem;
+}
+
+
+/* Reduce animations for users who request it */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    * {
+        transition: none !important;
+    }
+
+}
